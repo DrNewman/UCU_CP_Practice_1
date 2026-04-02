@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  webapi:
+    container_name: aspnet-webapi-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
